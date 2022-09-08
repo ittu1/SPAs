@@ -2,7 +2,7 @@
 
 ##'title' is used to show the text in title formatting
 
-##test theapp by running this in cmd  'streamlit run c:\Users\Dell\OneDrive\Documents\Scripting\vidtogif.py [ARGUMENTS]'
+##test theapp by running this in cmd  "streamlit run 'PATH TO APP' "
 
 ##the st input widget 'https://docs.streamlit.io/library/api-reference/widgets'  'file uploader' is being used here to upload mp4 video files 
  
