@@ -1,0 +1,7 @@
+SPA (for a sample Ebook by a Sample Company) 
+
+Node.JS (express-handlebars) and Stripe API with default card payment element - https://stripe.com/docs/payments/payment-element; https://github.com/stripe/stripe-node
+
+styling for navbar https://getbootstrap.com/docs/4.3/components/navbar/
+
+local deployment on localhost:5000 by default
