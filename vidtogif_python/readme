@@ -1,0 +1,11 @@
+Python video to gif converter 
+
+using streamlit and moviepy modules
+
+##'title' is used to show the text in title formatting
+
+##test theapp by running this in cmd  "streamlit run 'PATH TO APP' "
+
+##the st input widget 'https://docs.streamlit.io/library/api-reference/widgets'  'file uploader' is being used here to upload mp4 video files 
+ 
+##for the converter app - app will convert an mp4 file to GIF File using moviepy
