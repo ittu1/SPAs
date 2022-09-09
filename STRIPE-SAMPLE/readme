@@ -4,4 +4,4 @@ Node.JS (express-handlebars) and Stripe API with default card payment element - 
 
 styling for navbar https://getbootstrap.com/docs/4.3/components/navbar/
 
-local deployment on localhost:5000 by default
+Deployment to Heroku 
