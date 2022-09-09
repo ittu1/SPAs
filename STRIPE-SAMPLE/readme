@@ -1,4 +1,4 @@
-SPA (for a sample Ebook by a Sample Company) 
+SPA (for a sample Ebook by a Sample Company) + User profile creation Using Stripe API
 
 Node.JS (express-handlebars) and Stripe API with default card payment element - https://stripe.com/docs/payments/payment-element; https://github.com/stripe/stripe-node
 
