@@ -1,5 +1,6 @@
 const express = require('express');
-const stripe = require('stripe')('sk_test_51LfVbOELdcnNg3anRKppOQxdNoYv6PiuOpiCkEk1ZIQjg51uArznRHbTDZ84y90ntY0wKVRdB1n9kMnYss5sRe8K00AVijtm7j')
+const keys = require('./config/keys');
+const stripe = require('stripe')(keys.stripeSec);
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 
@@ -20,6 +21,28 @@ app.use(express.static(`${__dirname}/public`));
 // Index Route
 app.get('/', (req, res) => {
    res.render('index'); 
+});
+
+app.get('/success', (req, res) => {
+    res.render('index', {
+        stripePublishableKey: keys.stripePublishableKey
+    });
+});
+
+// Charge Route
+app.post('/charge', (req, res) => {
+    const amount =2000;
+    stripe.customers.create({
+        email: req.body.stripeEmail,
+        source: req.body.stripeToken
+    })
+    .then(customer => stripe.charges.create({
+        amount,
+        description: 'Sample Ebook',
+        currency: 'usd',
+        customer:customer.id
+    }))
+    .then(charge => res.render('success'));
 });
 
 const port = process.env.PORT || 5000;
